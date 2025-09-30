@@ -29,8 +29,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
     <base href="/" />
 
     <link rel="icon" href="/favicon.ico" integrity="sha384-jNOAE6jgE03LznIulCTVP6BH4NrTuROFjP9wj8bV1UUMJKtZAvstFpIAP3PDcFpx"/>
-
-    
     
     
     
@@ -136,7 +134,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
         }
       }
     </style>
-  <link rel="modulepreload" href="/life-cv.js" crossorigin="anonymous" integrity="sha384-jLLOwQLUaK/vofq/QkX5bEQW8YJ918TQEyOEVXtnFy+bfVmlUuc/xZOkmf1QlbHY"><link rel="preload" href="/life-cv_bg.wasm" crossorigin="anonymous" integrity="sha384-X2qaL/W2V2KG66rMkc0HgMb+KX7kbVMVfyXEATYOcEzOFPV1UfzESx9JDyLX5Nik" as="fetch" type="application/wasm"></head>
+  <link rel="modulepreload" href="/life-cv.js" crossorigin="anonymous" integrity="sha384-VkBSVyt9OQtrugNNSr58Ihr51dakNi1kLYnO/VPHWNsAZZw3qOqTDiNMF475E9l0"><link rel="preload" href="/life-cv_bg.wasm" crossorigin="anonymous" integrity="sha384-UShW//1p7ukYweAq6Xo24lUg+fjofIHeX/4907RJaLI2l3mMFyqiDDTy1NQDAokz" as="fetch" type="application/wasm"></head>
 
   <body>
     <!-- The WASM code will resize the canvas dynamically -->
@@ -149,17 +147,6 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
       <p style="font-size: 16px">Loading…</p>
       <div class="lds-dual-ring"></div>
     </div>
-
-    <!--Register Service Worker. this will cache the wasm / js scripts for offline use (for PWA functionality). -->
-    <!-- Force refresh (Ctrl + F5) to load the latest files instead of cached files  -->
-    <script>
-      // We disable caching during development so that we always view the latest version.
-      if ("serviceWorker" in navigator && window.location.hash !== "#dev") {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker.register("sw.js");
-        });
-      }
-    </script>
   </body>
 </html>
 
