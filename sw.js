@@ -1,4 +1,4 @@
-var cacheName = "egui-template-pwa";
+var cacheName = "life-cv-v1";
 var filesToCache = ["./", "./index.html", "./life-cv.js", "./life-cv_bg.wasm"];
 
 /* Start the service worker and cache all of the app's content */
